@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Business Lunch Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="left-section">
+      <h1 class="app-title">Business Lunch Manager</h1>
+    </div>
+    <div class="right-section">
+      <button id="btn-add-variant" class="btn btn-red">Добавить вариант</button>
+      <button id="btn-open-nomenclature-modal" class="btn btn-secondary">Добавить в номенклатуру</button>
+      <div class="admin-profile">
+        <img
+          src="images/povar.png"
+          alt="avatar"
+          class="admin-avatar"
+        />
+        <span class="admin-name">Администратор</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section id="variants-section">
+      <h2>Варианты меню</h2>
+      <div id="variants-container" class="variants-container">
+      </div>
+    </section>
+  </main>
+
+  <div id="variant-modal" class="modal hidden">
+    <div class="modal-content">
+      <h3 id="variant-modal-title">Новый вариант</h3>
+      <form id="variant-form">
+        <label for="variant-day-number">День и номер варианта:</label>
+        <input type="text" id="variant-day-number" required />
+
+        <input type="hidden" id="variant-id" />
+
+        <div class="modal-buttons">
+          <button type="submit" class="btn btn-success">Сохранить</button>
+          <button type="button" class="btn btn-light" id="btn-cancel-variant">Отмена</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="dish-modal" class="modal hidden">
+    <div class="modal-content">
+      <h3 id="dish-modal-title">Добавить блюдо</h3>
+      <form id="dish-form">
+        <label for="dish-name-select">Наименование блюда:</label>
+        <select id="dish-name-select" required>
+          <option value="">-- Выберите блюдо --</option>
+        </select>
+
+        <label for="dish-type">Тип блюда:</label>
+        <select id="dish-type" required>
+          <option value="">-- Выберите тип --</option>
+          <option value="салат">Салат</option>
+          <option value="первое">Первое</option>
+          <option value="второе">Второе</option>
+          <option value="напиток">Напиток</option>
+          <option value="десерт">Десерт</option>
+        </select>
+
+        <input type="hidden" id="dish-variant-id" />
+
+        <div class="modal-buttons">
+          <button type="submit" class="btn btn-success">Сохранить</button>
+          <button type="button" class="btn btn-light" id="btn-cancel-dish">Отмена</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="nomenclature-modal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Новая позиция номенклатуры</h3>
+      <form id="nomenclature-form">
+        <label for="nomenclature-name">Наименование:</label>
+        <input type="text" id="nomenclature-name" required />
+
+        <label for="nomenclature-default-type">Тип по умолчанию:</label>
+        <select id="nomenclature-default-type" required>
+          <option value="">-- Выберите тип --</option>
+          <option value="салат">Салат</option>
+          <option value="первое">Первое</option>
+          <option value="второе">Второе</option>
+          <option value="напиток">Напиток</option>
+          <option value="десерт">Десерт</option>
+        </select>
+
+        <div class="modal-buttons">
+          <button type="submit" class="btn btn-success">Сохранить</button>
+          <button type="button" class="btn btn-light" id="btn-cancel-nomenclature">Отмена</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
