@@ -50,5 +50,5 @@ DB_NAME=@your db name@
 DB_PASSWORD=@your db password@  
 DB_PORT=@your db port@  
 
-When ready to launch in terminal write: node server.js
+When ready to launch in terminal write: node server.js  
 If everything was done correctly, you should see message:"Server is running on http://localhost:5000" in the console.
