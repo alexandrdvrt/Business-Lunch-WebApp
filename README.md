@@ -6,13 +6,13 @@ npm init -y
 
 npm install express cors uuid dotenv
 
-Run this script in your postgres db:
-CREATE TABLE IF NOT EXISTS dish_nomenclature (
-  nomenclature_id SERIAL PRIMARY KEY,
-  name VARCHAR(255) NOT NULL,
-  default_type VARCHAR(50) NOT NULL
-);
-
+Run this script in your postgres db:\\
+CREATE TABLE IF NOT EXISTS dish_nomenclature (\\
+  nomenclature_id SERIAL PRIMARY KEY,\\
+  name VARCHAR(255) NOT NULL,\\
+  default_type VARCHAR(50) NOT NULL\\
+);\\
+\\
 
 CREATE TABLE IF NOT EXISTS variants (
   variant_id VARCHAR(50) PRIMARY KEY,
