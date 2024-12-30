@@ -43,7 +43,7 @@ VALUES
   ('Чай', 'напиток'),  
   ('Шоколадный пудинг', 'десерт');  
   
-Then and .env into /server:  
+Then add .env into /server:  
 DB_USER=postgres  
 DB_HOST=localhost  
 DB_NAME=@your db name@  
